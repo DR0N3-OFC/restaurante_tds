@@ -9,7 +9,7 @@ namespace Aula03.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
 
-        public int? ID { get; set; }
+        public int? ProdutoID { get; set; }
 
 
         [Required(ErrorMessage = "Nome é obrigatório")]

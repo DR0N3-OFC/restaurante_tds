@@ -8,13 +8,15 @@ namespace Aula03.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        public int? ID { get; set; }
+        public int? AtendimentoID { get; set; }
 
         [Required(ErrorMessage = "Garçom é obrigatório")]
         public Garcom? Garcom { get; set; }
 
         [Required(ErrorMessage = "Mesa é obrigatória")]
         public Mesa? Mesa { get; set; }
+
+        public List<Produto>? Produtos { get; set; } = new List<Produto>();
 
         [Required(ErrorMessage = "Data é obrigatória")]
         [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]

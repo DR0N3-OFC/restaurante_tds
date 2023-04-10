@@ -19,73 +19,97 @@ namespace Aula03.Data
                 return;
             }
 
-            var events = new EventsModel[]
-            {
-                new EventsModel{
-                    Name = "Torneio de Truco",
-                    Desc = "Campeonato acadêmico CC",
-                    Date = DateTime.Parse("2023-04-01")
-                },
-            };
 
-            context.AddRange(events);
-
-            var user = new User[]
+            
+            var garcom = new Garcom[]
             {
-                new User{
+                new Garcom{
                     Name = "Alpha",
-                    Password = "123",
                     Gender = "M",
-                    BirthDate = DateTime.Parse("2023-04-01"),
-                    IsAdm = false,
+                    BirthDate = DateTime.Parse("1999-04-20"),
                 },
             };
 
-            context.AddRange(user);
+            context.AddRange(garcom);
 
-
-            user = new User[]
+            garcom = new Garcom[]
             {
-                new User{
-                    Name = "admin",
-                    Password = "admin",
+                new Garcom{
+                    Name = "Afonso Lano",
                     Gender = "M",
-                    BirthDate = DateTime.Parse("2023-04-01"),
-                    IsAdm = true,
+                    BirthDate = DateTime.Parse("2000-02-01"),
                 },
             };
 
-            context.AddRange(user);
+            context.AddRange(garcom);
 
 
-            var book = new BooksModel[]
+
+            var mesa = new Mesa[]
             {
-                new BooksModel{
-                    Name = "Inteligência Emocional",
-                    Author = "Daniel Goleman",
-                    Desc = ".",
-                    PublicationYear = 2008,
-                    Price = 49.99,
+                new Mesa{
+                    Status = false
                 },
             };
-            book[0].GetPdfContent("C:/Users/Augusto/OneDrive/Área de Trabalho/Livros/Inteligencia-Emocional-Daniel-Goleman.pdf"); 
+            
+            context.AddRange(mesa);
 
-            context.AddRange(book);
-
-            book = new BooksModel[]
+            var produto1 = new Produto[]
             {
-                new BooksModel{
-                    Name = "Origins of the Genius",
-                    Author = "Dean Keith Simonton",
-                    Desc = "Darwinian Perspectives on how Creativity Works",
-                    PublicationYear = 2012,
-                    Price = 129.99,
+                new Produto{
+                    Name = "Arroz",
+                    Price = 3.0,
+
                 },
             };
 
-            book[0].GetPdfContent("C:/Users/Augusto/OneDrive/Área de Trabalho/Livros/Cognitive Neuroscience of Memory.pdf");
+            context.AddRange(produto1);
 
-            context.AddRange(book);
+            var produto2 = new Produto[]
+            {
+                new Produto{
+                    Name = "Peixe",
+                    Price = 6.0,
+
+                },
+            };
+
+            context.AddRange(produto2);
+
+            var produto3 = new Produto[]
+            {
+                new Produto{
+                    Name = "Feijao",
+                    Price = 3.0,
+
+                },
+            };
+
+            context.AddRange(produto3);
+
+            produto3 = new Produto[]
+            {
+                new Produto{
+                    Name = "Batata",
+                    Price = 4.5,
+
+                },
+            };
+
+            context.AddRange(produto3);
+
+            var atendimento = new Atendimento[]
+            {
+                new Atendimento{
+                    Garcom = garcom[0],
+                    Mesa = mesa[0],
+                },
+            };
+            atendimento[0].Produtos.Add(produto1[0]);
+            atendimento[0].Produtos.Add(produto1[1]);
+
+            context.AddRange(atendimento);
+
 
             context.SaveChanges();
         }

@@ -8,7 +8,7 @@ namespace Aula03.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        public int? ID { get; set; }
+        public int? MesaID { get; set; }
 
         public bool? Status { get; set; }
     }

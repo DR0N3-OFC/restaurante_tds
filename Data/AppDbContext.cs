@@ -15,23 +15,26 @@ namespace Aula03.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<EventsModel>().ToTable("Events").HasKey(o => o.EventID);
-            modelBuilder.Entity<User>().ToTable("Users").HasKey(o => o.ID);
-            modelBuilder.Entity<BooksModel>().ToTable("Books").HasKey(o => o.BookID);
+            modelBuilder.Entity<Garcom>().ToTable("Garcom").HasKey(o => o.GarcomID);
+            modelBuilder.Entity<Mesa>().ToTable("Mesa").HasKey(o => o.MesaID);
+            modelBuilder.Entity<Produto>().ToTable("Produto").HasKey(o => o.ProdutoID);
+            modelBuilder.Entity<Atendimento>().ToTable("Atendimento").HasKey(o => o.AtendimentoID);
 
 
-            modelBuilder.Entity<User>()
-                .HasMany(o => o.Books)
+
+            modelBuilder.Entity<Atendimento>()
+                .HasMany(o => o.Produtos)
                 .WithMany()
                 .UsingEntity<Dictionary<string, object>>(
-                    "UserBooks",
-                    e => e.HasOne<BooksModel>().WithMany().HasForeignKey("BookID"),
-                    j => j.HasOne<User>().WithMany().HasForeignKey("ID"),
+                    "Atendimentos",
+                    e => e.HasOne<Produto>().WithMany().HasForeignKey("ProdutoID"),
+                    j => j.HasOne<Atendimento>().WithMany().HasForeignKey("AtendimentoID"),
                     eJ =>
                     {
-                        eJ.HasKey("ID", "BookID");
-                        eJ.ToTable("UserBooks");
+                        eJ.HasKey("AtendimentoID", "ProdutoID");
+                        eJ.ToTable("Atendimentos");
                     });
+
 
 
             //base.OnModelCreating(modelBuilder);
