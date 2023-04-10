@@ -11,5 +11,7 @@ namespace Aula03.Models
         public int? MesaID { get; set; }
 
         public bool? Status { get; set; }
+
+        public DateTime? HoraLiberacao { get; set; }
     }
 }

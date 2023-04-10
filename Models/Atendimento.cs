@@ -10,7 +10,6 @@ namespace Aula03.Models
 
         public int? AtendimentoID { get; set; }
 
-        [Required(ErrorMessage = "Garçom é obrigatório")]
         public Garcom? Garcom { get; set; }
 
         [Required(ErrorMessage = "Mesa é obrigatória")]
@@ -18,7 +17,7 @@ namespace Aula03.Models
 
         public List<Produto>? Produtos { get; set; } = new List<Produto>();
 
-        [Required(ErrorMessage = "Data é obrigatória")]
+        [Required(ErrorMessage = "Data de início é obrigatória")]
         [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTime? InitDate { get; set; }
         public DateTime? FinishDate { get; set; }

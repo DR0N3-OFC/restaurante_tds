@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aula03.pages.Produtos
+namespace Aula03.pages.Atendimentos
 {
     public class Index : PageModel
     {
         AppDbContext _context;
 
-        public List<Produto> ProdutosList { get; set; } = new();
+        public List<Atendimento> AtendimentosList { get; set; } = new();
 
         public Index(AppDbContext context)
         {
@@ -19,8 +19,7 @@ namespace Aula03.pages.Produtos
         }
         public async Task<IActionResult> OnGetAsync()
         {
-            ProdutosList = await _context.Produto!.Include(p => p.Categoria).ToListAsync();
-
+            AtendimentosList = await _context.Atendimento!.Include(a => a.Garcom).Include(a => a.Mesa).ToListAsync();
             return Page();
         }
     }

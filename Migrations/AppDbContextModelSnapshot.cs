@@ -41,7 +41,7 @@ namespace Aula03.Migrations
                     b.Property<DateTime?>("FinishDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("GarcomID")
+                    b.Property<int?>("GarcomID")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("InitDate")
@@ -88,11 +88,15 @@ namespace Aula03.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Gender")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("SecondName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Telefone")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -106,6 +110,9 @@ namespace Aula03.Migrations
                     b.Property<int?>("MesaID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("HoraLiberacao")
+                        .HasColumnType("TEXT");
 
                     b.Property<bool?>("Status")
                         .HasColumnType("INTEGER");
@@ -123,6 +130,10 @@ namespace Aula03.Migrations
 
                     b.Property<int>("CategoriaID")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Desc")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -158,9 +169,7 @@ namespace Aula03.Migrations
                 {
                     b.HasOne("Aula03.Models.Garcom", "Garcom")
                         .WithMany()
-                        .HasForeignKey("GarcomID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GarcomID");
 
                     b.HasOne("Aula03.Models.Mesa", "Mesa")
                         .WithMany()

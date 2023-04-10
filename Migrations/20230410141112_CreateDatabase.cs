@@ -31,7 +31,8 @@ namespace Aula03.Migrations
                     GarcomID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
-                    Gender = table.Column<string>(type: "TEXT", nullable: false),
+                    SecondName = table.Column<string>(type: "TEXT", nullable: false),
+                    Telefone = table.Column<string>(type: "TEXT", nullable: false),
                     BirthDate = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -45,7 +46,8 @@ namespace Aula03.Migrations
                 {
                     MesaID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Status = table.Column<bool>(type: "INTEGER", nullable: true)
+                    Status = table.Column<bool>(type: "INTEGER", nullable: true),
+                    HoraLiberacao = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -59,6 +61,7 @@ namespace Aula03.Migrations
                     ProdutoID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Desc = table.Column<string>(type: "TEXT", nullable: false),
                     Price = table.Column<double>(type: "REAL", nullable: false),
                     CategoriaID = table.Column<int>(type: "INTEGER", nullable: false)
                 },
@@ -79,7 +82,7 @@ namespace Aula03.Migrations
                 {
                     AtendimentoID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    GarcomID = table.Column<int>(type: "INTEGER", nullable: false),
+                    GarcomID = table.Column<int>(type: "INTEGER", nullable: true),
                     MesaID = table.Column<int>(type: "INTEGER", nullable: false),
                     InitDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     FinishDate = table.Column<DateTime>(type: "TEXT", nullable: true),
@@ -92,8 +95,7 @@ namespace Aula03.Migrations
                         name: "FK_Atendimento_Garcom_GarcomID",
                         column: x => x.GarcomID,
                         principalTable: "Garcom",
-                        principalColumn: "GarcomID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "GarcomID");
                     table.ForeignKey(
                         name: "FK_Atendimento_Mesa_MesaID",
                         column: x => x.MesaID,

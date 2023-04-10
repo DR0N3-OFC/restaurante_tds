@@ -1,10 +1,31 @@
 ﻿@page
-@model Aula03.pages.Produtos.Index
+@model Aula03.pages.Mesas.Reserva
 @{
 }
 
 <hr />
-<td><a asp-page="/Produtos/Create">Criar Novo Produto</a></td>
+
+<body>
+    <div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>Atendimento</td>
+                    <td>Mesa</td>
+                    <td>Garçom</td>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>@Model.Atendimento.AtendimentoID</td>
+                        <td>@Model.Atendimento.Mesa.MesaID</td>
+                        <td>@Model.Atendimento.Garcom!.Name</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
 <hr />
 
 <body>
@@ -28,7 +49,10 @@
                         <td>@Html.DisplayFor(model => eventModel.Categoria.Name)</td>
                         <td>
                             <a asp-page="./Edit" asp-route-id="@eventModel.ProdutoID">Alterar</a>
-                            <a asp-page="./Delete" asp-route-id="@eventModel.ProdutoID">Remover</a>
+                            <form method="post" asp-page-handler="Adicionar">
+                                <input type="hidden" name="id" value="@eventModel.ProdutoID" />
+                                <input type="submit" class="btn btn-primary" value="Adicionar" />
+                            </form>
                         </td>
                     </tr>
                 }

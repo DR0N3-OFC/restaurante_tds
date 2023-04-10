@@ -15,9 +15,11 @@ namespace Aula03.Models
         [Required(ErrorMessage = "Nome é obrigatório")]
         public string? Name { get; set; }
 
+        [Required(ErrorMessage = "Nome é obrigatório")]
+        public string? SecondName { get; set; }
 
-        [Required(ErrorMessage = "Gênero é obrigatório")]
-        public string? Gender { get; set; }
+        [Required(ErrorMessage = "Telefone é obrigatório")]
+        public string? Telefone { get; set; }
 
 
         [Required(ErrorMessage = "Data é obrigatória")]

@@ -15,6 +15,9 @@ namespace Aula03.Models
         [Required(ErrorMessage = "Nome é obrigatório")]
         public string? Name { get; set; }
 
+        [Required(ErrorMessage = "Descrição é obrigatória")]
+        public string? Desc { get; set; }
+
         [Required(ErrorMessage = "Preço é obrigatório")]
         public double? Price { get; set; }
 

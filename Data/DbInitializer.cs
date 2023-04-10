@@ -16,12 +16,25 @@ namespace Aula03.Data
             }
 
 
-            
+
             var garcom = new Garcom[]
             {
                 new Garcom{
+                    Name = "",
+                    SecondName = "",
+                    Telefone = "",
+                    BirthDate = DateTime.Parse("2000-02-01"),
+                },
+            };
+
+            context.AddRange(garcom);
+
+            garcom = new Garcom[]
+            {
+                new Garcom{
                     Name = "Alpha",
-                    Gender = "M",
+                    SecondName = "Delta",
+                    Telefone = "45898985915",
                     BirthDate = DateTime.Parse("1999-04-20"),
                 },
             };
@@ -31,8 +44,9 @@ namespace Aula03.Data
             garcom = new Garcom[]
             {
                 new Garcom{
-                    Name = "Afonso Lano",
-                    Gender = "M",
+                    Name = "Afonso",
+                    SecondName = "Lano",
+                    Telefone = "45898932115",
                     BirthDate = DateTime.Parse("2000-02-01"),
                 },
             };
@@ -83,9 +97,10 @@ namespace Aula03.Data
             var produto1 = new Produto[]
             {
                 new Produto{
-                    Name = "Arroz",
-                    Price = 3.0,
-                    Categoria = categoria1[0]
+                    Name = "Bife",
+                    Desc = "Feijão, Arroz, Farofa e Bife",
+                    Price = 12.0,
+                    Categoria = categoria2[0]
 
                 },
             };
@@ -95,7 +110,8 @@ namespace Aula03.Data
             var produto2 = new Produto[]
             {
                 new Produto{
-                    Name = "Peixe",
+                    Name = "Peixe a la carte",
+                    Desc = "Peixe e arroz",
                     Price = 6.0,
                     Categoria= categoria2[0]
 
@@ -107,7 +123,8 @@ namespace Aula03.Data
             var produto3 = new Produto[]
             {
                 new Produto{
-                    Name = "Feijao",
+                    Name = "Vegetariano",
+                    Desc = "Feijão, Arroz e Salada",
                     Price = 3.0,
                     Categoria = categoria1[0]
 
@@ -120,6 +137,7 @@ namespace Aula03.Data
             {
                 new Produto{
                     Name = "Batata",
+                    Desc = "Arroz e Purê de Batata",
                     Price = 4.5,
                     Categoria = categoria1[0]
 
@@ -134,6 +152,7 @@ namespace Aula03.Data
                     Garcom = garcom[0],
                     Mesa = mesa[0],
                     InitDate = DateTime.Now,
+                    FinishDate = DateTime.Now,
                 },
             };
             atendimento[0].Produtos.Add(produto1[0]);

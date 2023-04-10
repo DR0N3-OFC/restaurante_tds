@@ -1,0 +1,17 @@
+﻿@page "{id:int}"
+@model Aula03.pages.Mesas.Delete
+@{
+}
+
+<h1>Detalhes do Item para Remover</h1>
+
+<div>
+	<p><strong>Nome:</strong>@Model.Mesa.MesaID</p>
+</div>
+
+<form method="post">
+	<div class="group-form">
+		<input type="submit" value="Deletar" class="btn btn-danger" />
+		<a asp-page="/Produtos/Index" class="btn btn-primary">Voltar à Lista</a>
+	</div>
+</form>

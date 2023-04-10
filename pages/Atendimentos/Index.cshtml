@@ -1,0 +1,38 @@
+﻿@page
+@model Aula03.pages.Atendimentos.Index
+@{
+}
+
+<hr />
+<td><a asp-page="/Produtos/Create">Criar Novo Produto</a></td>
+<hr />
+
+<body>
+    <div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.AtendimentosList[0].AtendimentoID)</td>
+                    <td>Garçom</td>
+                    <td>Mesa</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var eventModel in Model.AtendimentosList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => eventModel.AtendimentoID)</td>
+                        <td>@Html.DisplayFor(model => eventModel.Garcom!.Name)</td>
+                        <td>@Html.DisplayFor(model => eventModel.Mesa!.MesaID)</td>
+                        <td>@Html.DisplayFor(model => eventModel.InitDate)</td>
+                        <td>@Html.DisplayFor(model => eventModel.FinishDate)</td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@eventModel.AtendimentoID">Alterar</a>
+                            <a asp-page="./Delete" asp-route-id="@eventModel.AtendimentoID">Remover</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
