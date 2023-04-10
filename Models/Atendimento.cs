@@ -7,7 +7,6 @@ namespace Aula03.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-
         public int? AtendimentoID { get; set; }
 
         public Garcom? Garcom { get; set; }

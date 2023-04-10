@@ -29,15 +29,14 @@ namespace Aula03.Data
                 .HasMany(o => o.Produtos)
                 .WithMany()
                 .UsingEntity<Dictionary<string, object>>(
-                    "Atendimentos",
+                    "AtendimentoProdutos",
                     e => e.HasOne<Produto>().WithMany().HasForeignKey("ProdutoID"),
                     j => j.HasOne<Atendimento>().WithMany().HasForeignKey("AtendimentoID"),
                     eJ =>
                     {
                         eJ.HasKey("AtendimentoID", "ProdutoID");
-                        eJ.ToTable("Atendimentos");
+                        eJ.ToTable("AtendimentoProdutos");
                     });
-
 
 
             //base.OnModelCreating(modelBuilder);

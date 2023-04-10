@@ -3,6 +3,10 @@
 @{
 }
 
+<form method="post" asp-page-handler="Cancelar">
+    <input type="submit" value="Cancelar" class="btn btn-danger" />    
+</form>
+
 <hr />
 
 <body>
@@ -10,25 +14,56 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
-                    <td>Atendimento</td>
                     <td>Mesa</td>
                     <td>Garçom</td>
                 </tr>
             </thead>
             <tbody>
                     <tr>
-                        <td>@Model.Atendimento.AtendimentoID</td>
-                        <td>@Model.Atendimento.Mesa.MesaID</td>
+                        <td>@Model.Atendimento!.Mesa!.MesaID</td>
                         <td>@Model.Atendimento.Garcom!.Name</td>
                     </tr>
             </tbody>
         </table>
     </div>
-</body>
 
-<hr />
 
-<body>
+    <div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.AtendimentoProdutos[0].Name)</td>
+                    <td>@Html.DisplayNameFor(model => model.AtendimentoProdutos[0].Price)</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var eventModel in Model.Atendimento.Produtos)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => eventModel.Name)</td>
+                        <td>@Html.DisplayFor(model => eventModel.Price)</td>
+                        <td>
+                            <form method="post" asp-page-handler="Adicionar">
+                                <input type="hidden" name="id" value="@eventModel.ProdutoID" />
+                                <input type="submit" class="btn btn-primary" value="Adicionar" />
+                                
+                            </form>
+                        <td/>
+                        <td>
+                            <form method="post" asp-page-handler="Deletar">
+                                <input type="hidden" name="id" value="@eventModel.ProdutoID" />
+                                <input type="submit" value="Deletar" class="btn btn-danger" />    
+                            </form>
+                            
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
     <div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -40,13 +75,13 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var eventModel in Model.ProdutosList)
+                @foreach (var eventModel in Model.ProdutosList!)
                 {
                     <tr>
                         <td>@Html.DisplayFor(model => eventModel.ProdutoID)</td>
                         <td>@Html.DisplayFor(model => eventModel.Name)</td>
                         <td>@Html.DisplayFor(model => eventModel.Price)</td>
-                        <td>@Html.DisplayFor(model => eventModel.Categoria.Name)</td>
+                        <td>@Html.DisplayFor(model => eventModel.Categoria!.Name)</td>
                         <td>
                             <a asp-page="./Edit" asp-route-id="@eventModel.ProdutoID">Alterar</a>
                             <form method="post" asp-page-handler="Adicionar">

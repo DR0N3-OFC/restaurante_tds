@@ -59,10 +59,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = cGFnZXNcTWVzYXNcUmVzZXJ2YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Tds/Restaurante/pages/Players.cshtml]
-build_metadata.AdditionalFiles.TargetPath = cGFnZXNcUGxheWVycy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Tds/Restaurante/pages/Produtos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = cGFnZXNcUHJvZHV0b3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -85,10 +81,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Tds/Restaurante/pages/Shared/_MenuPartialPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = cGFnZXNcU2hhcmVkXF9NZW51UGFydGlhbFBhZ2UuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Tds/Restaurante/pages/Sports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = cGFnZXNcU3BvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Tds/Restaurante/pages/_ViewImports.cshtml]

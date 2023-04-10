@@ -13,5 +13,6 @@ namespace Aula03.Models
         public bool? Status { get; set; }
 
         public DateTime? HoraLiberacao { get; set; }
+
     }
 }

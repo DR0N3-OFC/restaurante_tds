@@ -10,7 +10,7 @@ namespace Aula03.pages.Atendimentos
     {
         private AppDbContext _context;
         [BindProperty]
-        public Atendimento Atendimento { get; set; } = new();
+        public Atendimento? Atendimento { get; set; } = new();
 
         public Delete(AppDbContext context)
         {
@@ -20,11 +20,14 @@ namespace Aula03.pages.Atendimentos
         public async Task<IActionResult> OnGetAsync(int? id)
         {
 
-            var eventModel = await _context.Atendimento!.Include(a => a.Garcom).Include(a => a.Mesa).FirstOrDefaultAsync(e => e.AtendimentoID == id);
+            Atendimento = await _context.Atendimento!
+                                .Include(a => a.Garcom)
+                                .Include(a => a.Mesa)
+                                .Include(a => a.Produtos)
+                                .FirstOrDefaultAsync(e => e.AtendimentoID == id);
 
-            if (eventModel == null) return NotFound();
+            if (Atendimento == null) return NotFound();
 
-            Atendimento = eventModel;
 
             return Page();
         }

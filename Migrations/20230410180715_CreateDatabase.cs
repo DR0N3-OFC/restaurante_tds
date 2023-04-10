@@ -105,7 +105,7 @@ namespace Aula03.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Atendimentos",
+                name: "AtendimentoProdutos",
                 columns: table => new
                 {
                     AtendimentoID = table.Column<int>(type: "INTEGER", nullable: false),
@@ -113,15 +113,15 @@ namespace Aula03.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Atendimentos", x => new { x.AtendimentoID, x.ProdutoID });
+                    table.PrimaryKey("PK_AtendimentoProdutos", x => new { x.AtendimentoID, x.ProdutoID });
                     table.ForeignKey(
-                        name: "FK_Atendimentos_Atendimento_AtendimentoID",
+                        name: "FK_AtendimentoProdutos_Atendimento_AtendimentoID",
                         column: x => x.AtendimentoID,
                         principalTable: "Atendimento",
                         principalColumn: "AtendimentoID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Atendimentos_Produto_ProdutoID",
+                        name: "FK_AtendimentoProdutos_Produto_ProdutoID",
                         column: x => x.ProdutoID,
                         principalTable: "Produto",
                         principalColumn: "ProdutoID",
@@ -139,8 +139,8 @@ namespace Aula03.Migrations
                 column: "MesaID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Atendimentos_ProdutoID",
-                table: "Atendimentos",
+                name: "IX_AtendimentoProdutos_ProdutoID",
+                table: "AtendimentoProdutos",
                 column: "ProdutoID");
 
             migrationBuilder.CreateIndex(
@@ -153,7 +153,7 @@ namespace Aula03.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Atendimentos");
+                name: "AtendimentoProdutos");
 
             migrationBuilder.DropTable(
                 name: "Atendimento");

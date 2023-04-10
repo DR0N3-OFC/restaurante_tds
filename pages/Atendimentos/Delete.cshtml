@@ -12,6 +12,25 @@
 	<p><strong>Data:</strong>@Model.Atendimento.FinishDate</p>
 </div>
 
+
+<table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>Preço</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var eventModel in Model.Atendimento.Produtos)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => eventModel.Name)</td>
+                        <td>@Html.DisplayFor(model => eventModel.Price)</td>
+                    </tr>
+                }
+            </tbody>
+</table>
+
 <form method="post">
 	<div class="group-form">
 		<input type="submit" value="Deletar" class="btn btn-danger" />

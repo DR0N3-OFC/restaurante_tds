@@ -7,8 +7,6 @@ namespace Aula03.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-
-
         public int? ProdutoID { get; set; }
 
 

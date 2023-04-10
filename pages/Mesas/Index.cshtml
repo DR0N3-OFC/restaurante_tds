@@ -25,9 +25,17 @@
                         <td>
                             <a asp-page="./Delete" asp-route-id="@eventModel.MesaID">Remover</a>
                         </td>
-                        <td>
-                            <a asp-page="./Reserva" asp-route-id="@eventModel.MesaID">Reservar Mesa</a>
-                        </td>
+                        @if ((eventModel.HoraLiberacao < DateTime.Now) || (eventModel.HoraLiberacao == null)) {
+                            <td>
+                                <a asp-page="./Reserva" asp-route-id="@eventModel.MesaID">Reservar Mesa</a>
+                            </td>
+                        }   
+                        else
+                        {
+                            <td>
+                                Mesa indisponível.
+                            </td>
+                        }
                     </tr>
                 }
             </tbody>

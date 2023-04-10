@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aula03.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230410141112_CreateDatabase")]
+    [Migration("20230410180715_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace Aula03.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.4");
 
-            modelBuilder.Entity("Atendimentos", b =>
+            modelBuilder.Entity("AtendimentoProdutos", b =>
                 {
                     b.Property<int>("AtendimentoID")
                         .HasColumnType("INTEGER");
@@ -32,7 +32,7 @@ namespace Aula03.Migrations
 
                     b.HasIndex("ProdutoID");
 
-                    b.ToTable("Atendimentos", (string)null);
+                    b.ToTable("AtendimentoProdutos", (string)null);
                 });
 
             modelBuilder.Entity("Aula03.Models.Atendimento", b =>
@@ -153,7 +153,7 @@ namespace Aula03.Migrations
                     b.ToTable("Produto", (string)null);
                 });
 
-            modelBuilder.Entity("Atendimentos", b =>
+            modelBuilder.Entity("AtendimentoProdutos", b =>
                 {
                     b.HasOne("Aula03.Models.Atendimento", null)
                         .WithMany()
