@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "I5d9sUpy4QBUuhMXgzxvQKlzKOMVzMYw7SKQL4rgaNI=",
+  "Source": "Aula03",
+  "BasePath": "_content/Aula03",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Aula03\\wwwroot",
+      "Source": "Aula03",
+      "ContentRoot": "C:\\Tds\\PsychoLogDesktop\\wwwroot\\",
+      "BasePath": "_content/Aula03",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

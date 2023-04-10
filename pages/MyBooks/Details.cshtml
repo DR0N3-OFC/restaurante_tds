@@ -1,0 +1,24 @@
+﻿@page "{id:int}"
+@model Aula03.pages.MyBooks.Details
+@{
+}
+
+<h1>Detalhes do Livro</h1>
+
+
+<div>
+	<p><strong>Nome:</strong>@Model.Book.Name</p>
+	<p><strong>Descrição:</strong>@Model.Book.Author</p>
+	<p><strong>Descrição:</strong>@Model.Book.Desc</p>
+	<p><strong>Data:</strong>@Model.Book.PublicationYear</p>
+	<p><strong>Descrição:</strong>@Model.Book.Price</p>
+	<form method="post">
+		<input type="hidden" name="BookID" value="@Model.Book.BookID" />
+		<input type="submit" class="btn btn-primary" value="Baixar" />
+	</form>
+</div>
+<br />
+<a asp-page="Index">Voltar à Lista</a>
+
+
+<div asp-validation-summary="ModelOnly" class="text-dange"></div>

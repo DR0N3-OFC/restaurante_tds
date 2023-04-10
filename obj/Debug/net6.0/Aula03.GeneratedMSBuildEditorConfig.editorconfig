@@ -1,0 +1,104 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Aula03
+build_property.RootNamespace = Aula03
+build_property.ProjectDir = C:\Tds\Restaurante\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Tds\Restaurante
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Tds/Restaurante/pages/BooksAdm/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQm9va3NBZG1cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/BooksAdm/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQm9va3NBZG1cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/BooksAdm/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQm9va3NBZG1cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/BooksAdm/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQm9va3NBZG1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Books/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQm9va3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Books/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQm9va3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Events/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcRXZlbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Events/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcRXZlbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Events/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcRXZlbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Events/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcRXZlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/HttpSession/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcSHR0cFNlc3Npb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/IndexAdm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcSW5kZXhBZG0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/MyBooks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcTXlCb29rc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/MyBooks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcTXlCb29rc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Players.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcUGxheWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Shared/_MainLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcU2hhcmVkXF9NYWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Shared/_MenuPartialPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcU2hhcmVkXF9NZW51UGFydGlhbFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Sports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcU3BvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
