@@ -1,0 +1,36 @@
+﻿@page
+@model Aula03.pages.Produtos.Index
+@{
+}
+
+<hr />
+<td><a asp-page="/Produtos/Create">Criar Novo Produto</a></td>
+<hr />
+
+<body>
+    <div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.ProdutosList[0].ProdutoID)</td>
+                    <td>@Html.DisplayNameFor(model => model.ProdutosList[0].Name)</td>
+                    <td>@Html.DisplayNameFor(model => model.ProdutosList[0].Price)</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var eventModel in Model.ProdutosList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => eventModel.ProdutoID)</td>
+                        <td>@Html.DisplayFor(model => eventModel.Name)</td>
+                        <td>@Html.DisplayFor(model => eventModel.Price)</td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@eventModel.ProdutoID">Alterar</a>
+                            <a asp-page="./Delete" asp-route-id="@eventModel.ProdutoID">Remover</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

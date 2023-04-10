@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aula03.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230410121126_CreateDatabase")]
+    [Migration("20230410124459_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -66,66 +66,19 @@ namespace Aula03.Migrations
                     b.ToTable("Atendimento", (string)null);
                 });
 
-            modelBuilder.Entity("Aula03.Models.BooksModel", b =>
+            modelBuilder.Entity("Aula03.Models.Categoria", b =>
                 {
-                    b.Property<int?>("BookID")
+                    b.Property<int?>("CategoriaID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<byte[]>("Content")
-                        .HasColumnType("BLOB");
-
-                    b.Property<string>("Desc")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<double?>("Price")
-                        .IsRequired()
-                        .HasColumnType("REAL");
+                    b.HasKey("CategoriaID");
 
-                    b.Property<int?>("PublicationYear")
-                        .IsRequired()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("UserID")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("BookID");
-
-                    b.HasIndex("UserID");
-
-                    b.ToTable("Books");
-                });
-
-            modelBuilder.Entity("Aula03.Models.EventsModel", b =>
-                {
-                    b.Property<int?>("EventID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime?>("Date")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Desc")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("EventID");
-
-                    b.ToTable("Events");
+                    b.ToTable("Categoria", (string)null);
                 });
 
             modelBuilder.Entity("Aula03.Models.Garcom", b =>
@@ -171,6 +124,9 @@ namespace Aula03.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("CategoriaID")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -181,37 +137,9 @@ namespace Aula03.Migrations
 
                     b.HasKey("ProdutoID");
 
+                    b.HasIndex("CategoriaID");
+
                     b.ToTable("Produto", (string)null);
-                });
-
-            modelBuilder.Entity("Aula03.Models.User", b =>
-                {
-                    b.Property<int?>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime?>("BirthDate")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool?>("IsAdm")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Atendimentos", b =>
@@ -248,16 +176,15 @@ namespace Aula03.Migrations
                     b.Navigation("Mesa");
                 });
 
-            modelBuilder.Entity("Aula03.Models.BooksModel", b =>
+            modelBuilder.Entity("Aula03.Models.Produto", b =>
                 {
-                    b.HasOne("Aula03.Models.User", null)
-                        .WithMany("Books")
-                        .HasForeignKey("UserID");
-                });
+                    b.HasOne("Aula03.Models.Categoria", "Categoria")
+                        .WithMany()
+                        .HasForeignKey("CategoriaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-            modelBuilder.Entity("Aula03.Models.User", b =>
-                {
-                    b.Navigation("Books");
+                    b.Navigation("Categoria");
                 });
 #pragma warning restore 612, 618
         }

@@ -4,17 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aula03.pages.Events
+namespace Aula03.pages.Produtos
 {
     public class Create : PageModel
     {
         private AppDbContext _context;
         [BindProperty]
-        public EventsModel EventModel { get; set; } = new();
-        public void OnGet()
-        {
-
-        }
+        public Produto Produto { get; set; } = new();
+        
         public Create(AppDbContext context)
         {
             _context = context;
@@ -24,12 +21,11 @@ namespace Aula03.pages.Events
         {
             if (!ModelState.IsValid)
                 return Page();
-
             try
             {
-                _context.Add(EventModel);
+                _context.Add(Produto);
                 await _context.SaveChangesAsync();
-                return RedirectToPage("/Events/Index");
+                return RedirectToPage("/Produtos/Index");
             } catch(DbUpdateException)
             {
                 return Page();

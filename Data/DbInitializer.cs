@@ -6,15 +6,11 @@ namespace Aula03.Data
     {
         public static void Initialize(AppDbContext context)
         {
-            if(context.Events!.Any())
+            if(context.Produto!.Any())
             {
                 return;
             }
-            if (context.Users!.Any())
-            {
-                return;
-            }
-            if (context.Books!.Any())
+            if (context.Mesa!.Any())
             {
                 return;
             }
@@ -54,11 +50,42 @@ namespace Aula03.Data
             
             context.AddRange(mesa);
 
+            var categoria1 = new Categoria[]
+            {
+                new Categoria{
+                    Name = "Cereal",
+
+                },
+            };
+
+            context.AddRange(categoria1);
+
+            var categoria2 = new Categoria[]
+            {
+                new Categoria{
+                    Name = "Carne",
+
+                },
+            };
+
+            context.AddRange(categoria2);
+
+            var categoria3 = new Categoria[]
+            {
+                new Categoria{
+                    Name = "Refrigerante",
+
+                },
+            };
+
+            context.AddRange(categoria3);
+
             var produto1 = new Produto[]
             {
                 new Produto{
                     Name = "Arroz",
                     Price = 3.0,
+                    Categoria = categoria1[0]
 
                 },
             };
@@ -70,6 +97,7 @@ namespace Aula03.Data
                 new Produto{
                     Name = "Peixe",
                     Price = 6.0,
+                    Categoria= categoria2[0]
 
                 },
             };
@@ -81,6 +109,7 @@ namespace Aula03.Data
                 new Produto{
                     Name = "Feijao",
                     Price = 3.0,
+                    Categoria = categoria1[0]
 
                 },
             };
@@ -92,6 +121,7 @@ namespace Aula03.Data
                 new Produto{
                     Name = "Batata",
                     Price = 4.5,
+                    Categoria = categoria1[0]
 
                 },
             };
@@ -103,10 +133,11 @@ namespace Aula03.Data
                 new Atendimento{
                     Garcom = garcom[0],
                     Mesa = mesa[0],
+                    InitDate = DateTime.Now,
                 },
             };
             atendimento[0].Produtos.Add(produto1[0]);
-            atendimento[0].Produtos.Add(produto1[1]);
+            atendimento[0].Produtos.Add(produto2[0]);
 
             context.AddRange(atendimento);
 
