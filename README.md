@@ -6,4 +6,6 @@ Para conseguir rodar o código sem problemas é necessário que ele esteja no di
 Caso alguma exceção referente ao diretório `wwwroot` ocorra, possivelmente ele está faltando. Então você deverá criá-lo na raíz do projeto.
 
 ## Requisitos
-- .NET 6.0
+- .NET 6.0;
+- EntityFramework Core:
+-- Para instalar digite `dotnet tool install --global dotnet-ef` e `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`;
