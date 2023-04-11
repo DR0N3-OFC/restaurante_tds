@@ -90,7 +90,7 @@ namespace Aula03.pages.Mesas
                             .Include(a => a.Produtos)
                             .FirstOrDefault();
 
-            httpContext!.Session.SetInt32("AtendimentoID", Atendimento.AtendimentoID ?? 1);
+            httpContext!.Session.SetInt32("AtendimentoID", Atendimento!.AtendimentoID ?? 1);
             httpContext!.Session.SetString("Checked", "T");
 
 
@@ -101,7 +101,7 @@ namespace Aula03.pages.Mesas
         {
             Produto = await _context.Produto!.FirstOrDefaultAsync(e => e.ProdutoID == id);
 
-            Atendimento = await _context.Atendimento
+            Atendimento = await _context.Atendimento!
                             //.OrderByDescending(e => e.AtendimentoID)
                             .Include(a => a.Garcom)
                             .Include(a => a.Mesa)
@@ -113,7 +113,7 @@ namespace Aula03.pages.Mesas
             //httpContext!.Session.SetInt32("AtendimentoID", Atendimento.AtendimentoID ?? 1);
 
 
-            Atendimento.Produtos.Add(Produto);
+            Atendimento!.Produtos!.Add(Produto);
             await _context.SaveChangesAsync();
             Total = Atendimento.Produtos!.Sum(p => p.Price);
 
@@ -123,7 +123,7 @@ namespace Aula03.pages.Mesas
         {
             Produto = await _context.Produto!.FirstOrDefaultAsync(e => e.ProdutoID == id);
 
-            Atendimento = await _context.Atendimento
+            Atendimento = await _context.Atendimento!
                             .OrderByDescending(e => e.AtendimentoID)
                             .Include(a => a.Garcom)
                             .Include(a => a.Mesa)
@@ -134,7 +134,7 @@ namespace Aula03.pages.Mesas
             //httpContext!.Session.SetInt32("AtendimentoID", Atendimento.AtendimentoID ?? 1);
 
 
-            Atendimento.Produtos.Remove(Produto);
+            Atendimento!.Produtos!.Remove(Produto);
             await _context.SaveChangesAsync();
 
             return Page();
@@ -144,7 +144,7 @@ namespace Aula03.pages.Mesas
         {
             Garcom = await _context.Garcom!.FirstOrDefaultAsync(e => e.GarcomID == id);
 
-            Atendimento = await _context.Atendimento
+            Atendimento = await _context.Atendimento!
                             .OrderByDescending(e => e.AtendimentoID)
                             .Include(a => a.Garcom)
                             .Include(a => a.Mesa)
@@ -154,8 +154,7 @@ namespace Aula03.pages.Mesas
             //HttpContext httpContext = _httpContextAccessor.HttpContext!;
             //httpContext!.Session.SetInt32("AtendimentoID", Atendimento.AtendimentoID ?? 1);
 
-
-            Atendimento.Garcom = Garcom;
+            Atendimento!.Garcom = Garcom;
             _context.Update(Atendimento);
             await _context.SaveChangesAsync();
 
@@ -172,14 +171,14 @@ namespace Aula03.pages.Mesas
             Mesa = await _context.Mesa!.FirstOrDefaultAsync(e => e.MesaID == mesa_id);
             Mesa.HoraLiberacao = DateTime.Now;
 
-            Atendimento = await _context.Atendimento
+            Atendimento = await _context.Atendimento!
                             //.OrderByDescending(e => e.AtendimentoID)
                             .Include(a => a.Garcom)
                             .Include(a => a.Mesa)
                             .Include(a => a.Produtos)
                             .FirstOrDefaultAsync(e => e.AtendimentoID == atendimento_id);
 
-            _context.Atendimento.Remove(Atendimento);
+            _context.Atendimento!.Remove(Atendimento);
             await _context.SaveChangesAsync();
 
             httpContext!.Session.SetInt32("AtendimentoID", 1);
@@ -192,19 +191,19 @@ namespace Aula03.pages.Mesas
         {
             HttpContext httpContext = _httpContextAccessor.HttpContext!;
 
-            Atendimento = await _context.Atendimento
+            Atendimento = await _context.Atendimento!
                             //.OrderByDescending(e => e.AtendimentoID)
                             .Include(a => a.Garcom)
                             .Include(a => a.Mesa)
                             .Include(a => a.Produtos)
                             .FirstOrDefaultAsync(e => e.AtendimentoID == atendimento_id);
 
-            if(Atendimento.Garcom.GarcomID == 1)
+            if(Atendimento!.Garcom!.GarcomID == 1)
             {
                 ModelState.AddModelError("", "Erro: Precisa escolher um garçom.");
                 return Page();
             }
-            if (Atendimento.Produtos.Count == 0)
+            if (Atendimento.Produtos!.Count == 0)
             {
                 ModelState.AddModelError("", "Erro: Nenhum produto foi adicionado ainda.");
                 return Page();
