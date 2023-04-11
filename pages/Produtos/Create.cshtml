@@ -2,23 +2,24 @@
 @model Aula03.pages.Produtos.Create
 @{
 }
-<h1>Adicionar Produto</h1>
-<div asp-validation-summary="ModelOnly" class="text-dange"></div>
-<div>
+
+<div class="container mt-5">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-6 mx-auto criar">
+			<h1>Adicionar Produto</h1>
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<form method="post">
-				<div asp-validation-summary="ModelOnly" class="text-dange"></div>
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 				<input type="hidden" asp-for="Produto.ProdutoID" />
 				<div class="form-group">
 					<label asp-for="Produto.Name">Título:</label>
 					<input asp-for="Produto.Name" class="form-control" />
-					<span asp-validation-for="Produto.Name" class="text-dange"></span>
+					<span asp-validation-for="Produto.Name" class="text-danger"></span>
 				</div>
 				<div class="form-group">
 					<label asp-for="Produto.Desc">Descrição:</label>
 					<input asp-for="Produto.Desc" class="form-control" />
-					<span asp-validation-for="Produto.Desc" class="text-dange"></span>
+					<span asp-validation-for="Produto.Desc" class="text-danger"></span>
 				</div>
 				<div class="form-group">
 					<label asp-for="Produto.Categoria">Categoria: </label>
