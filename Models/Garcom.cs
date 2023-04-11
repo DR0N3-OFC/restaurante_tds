@@ -25,5 +25,7 @@ namespace Aula03.Models
         [Required(ErrorMessage = "Data é obrigatória")]
         [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTime? BirthDate { get; set; }
+        [Required(ErrorMessage = "Estatística é obrigatória")]
+        public Double? Estatistica { get; set; }
     }
 }

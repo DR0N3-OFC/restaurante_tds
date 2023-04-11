@@ -23,5 +23,7 @@ namespace Aula03.Models
 
         //[Required(ErrorMessage = "Categoria é obrigatória")]
         public Categoria? Categoria { get; set; }
+        [Required(ErrorMessage = "Estatística é obrigatória")]
+        public Double? Estatistica { get; set; }
     }
 }

@@ -31,6 +31,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQXRlbmRpbWVudG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Tds/Restaurante/pages/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Garcons/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcR2FyY29uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Garcons/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcR2FyY29uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Garcons/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcR2FyY29uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Garcons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcR2FyY29uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Tds/Restaurante/pages/HttpSession/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = cGFnZXNcSHR0cFNlc3Npb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

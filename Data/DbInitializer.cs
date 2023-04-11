@@ -24,6 +24,7 @@ namespace Aula03.Data
                     SecondName = "",
                     Telefone = "",
                     BirthDate = DateTime.Parse("2000-02-01"),
+                    Estatistica = 0.0
                 },
             };
 
@@ -36,6 +37,7 @@ namespace Aula03.Data
                     SecondName = "Delta",
                     Telefone = "45898985915",
                     BirthDate = DateTime.Parse("1999-04-20"),
+                    Estatistica = 0.0
                 },
             };
 
@@ -48,6 +50,7 @@ namespace Aula03.Data
                     SecondName = "Lano",
                     Telefone = "45898932115",
                     BirthDate = DateTime.Parse("2000-02-01"),
+                    Estatistica = 18.0
                 },
             };
 
@@ -58,7 +61,8 @@ namespace Aula03.Data
             var mesa = new Mesa[]
             {
                 new Mesa{
-                    Status = false
+                    Status = false,
+                    Estatistica = 18.0
                 },
             };
             
@@ -68,6 +72,7 @@ namespace Aula03.Data
             {
                 new Categoria{
                     Name = "Cereal",
+                    Estatistica = 0
 
                 },
             };
@@ -78,7 +83,7 @@ namespace Aula03.Data
             {
                 new Categoria{
                     Name = "Carne",
-
+                    Estatistica = 18.0
                 },
             };
 
@@ -88,6 +93,7 @@ namespace Aula03.Data
             {
                 new Categoria{
                     Name = "Refrigerante",
+                    Estatistica = 0
 
                 },
             };
@@ -98,6 +104,7 @@ namespace Aula03.Data
             {
                 new Categoria{
                     Name = "Suco",
+                    Estatistica = 0
 
                 },
             };
@@ -108,6 +115,7 @@ namespace Aula03.Data
             {
                 new Categoria{
                     Name = "Quebra da Matrix",
+                    Estatistica = 0
 
                 },
             };
@@ -120,7 +128,8 @@ namespace Aula03.Data
                     Name = "Bife",
                     Desc = "Feijão, Arroz, Farofa e Bife",
                     Price = 12.0,
-                    Categoria = categoria2[0]
+                    Categoria = categoria2[0],
+                    Estatistica = 12.0
 
                 },
             };
@@ -133,7 +142,8 @@ namespace Aula03.Data
                     Name = "Peixe a la carte",
                     Desc = "Peixe e arroz",
                     Price = 6.0,
-                    Categoria= categoria2[0]
+                    Categoria= categoria2[0],
+                    Estatistica = 6.0
 
                 },
             };
@@ -146,7 +156,8 @@ namespace Aula03.Data
                     Name = "Vegetariano",
                     Desc = "Feijão, Arroz e Salada",
                     Price = 3.0,
-                    Categoria = categoria1[0]
+                    Categoria = categoria1[0],
+                    Estatistica = 0
 
                 },
             };
@@ -159,7 +170,8 @@ namespace Aula03.Data
                     Name = "Batata",
                     Desc = "Arroz e Purê de Batata",
                     Price = 4.5,
-                    Categoria = categoria1[0]
+                    Categoria = categoria1[0],
+                    Estatistica = 0
 
                 },
             };
@@ -173,7 +185,8 @@ namespace Aula03.Data
                     Name = "Coca Lata",
                     Desc = "Refrigerante Insaldável",
                     Price = 4.5,
-                    Categoria = categoria3[0]
+                    Categoria = categoria3[0],
+                    Estatistica = 0
 
                 },
             };
@@ -186,7 +199,8 @@ namespace Aula03.Data
                     Name = "Suco de Uva Integral",
                     Desc = "Tier S",
                     Price = 7.5,
-                    Categoria = categoria4[0]
+                    Categoria = categoria4[0],
+                    Estatistica = 0
 
                 },
             };
@@ -199,7 +213,8 @@ namespace Aula03.Data
                     Name = "Café",
                     Desc = "Tier S",
                     Price = 400.5,
-                    Categoria = categoria5[0]
+                    Categoria = categoria5[0],
+                    Estatistica = 0
 
                 },
             };

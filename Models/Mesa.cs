@@ -13,6 +13,8 @@ namespace Aula03.Models
         public bool? Status { get; set; }
 
         public DateTime? HoraLiberacao { get; set; }
+        [Required(ErrorMessage = "Estatística é obrigatória")]
+        public Double? Estatistica { get; set; }
 
     }
 }

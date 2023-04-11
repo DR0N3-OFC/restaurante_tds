@@ -2,15 +2,17 @@
 @model Aula03.pages.Mesas.Create
 @{
 }
-<h1>Adicionar Livro</h1>
-<div>
+
+<div class="container mt-5">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-4 mx-auto criar">
+			<h1>Deseja criar uma nova mesa?</h1>
 			<form method="post">
 				<div asp-validation-summary="ModelOnly" class="text-dange"></div>
 				<input type="hidden" asp-for="Mesa.MesaID" />
+				<input type="hidden" asp-for="Mesa.Estatistica" value="0" />
 				<div class="form-group">
-					<input type="submit" class="btn btn-primary" value="Salvar" />
+					<input type="submit" class="btn btn-primary" value="Sim" />
 					<a asp-page="/Mesas/Index" class="btn btn-secondary">Cancelar</a>
 				</div>
 			</form>
