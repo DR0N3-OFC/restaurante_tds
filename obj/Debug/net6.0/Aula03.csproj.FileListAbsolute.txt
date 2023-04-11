@@ -241,6 +241,11 @@ C:\Tds\Restaurante\obj\Debug\net6.0\refint\Aula03.dll
 C:\Tds\Restaurante\obj\Debug\net6.0\Aula03.pdb
 C:\Tds\Restaurante\obj\Debug\net6.0\Aula03.genruntimeconfig.cache
 C:\Tds\Restaurante\obj\Debug\net6.0\ref\Aula03.dll
+C:\Tds\Restaurante\obj\Debug\net6.0\staticwebassets\msbuild.Aula03.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Tds\Restaurante\obj\Debug\net6.0\staticwebassets\msbuild.build.Aula03.props
+C:\Tds\Restaurante\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Aula03.props
+C:\Tds\Restaurante\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Aula03.props
+C:\Tds\Restaurante\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Tds\restaurante_tds-master2\bin\Debug\net6.0\appsettings.Development.json
 C:\Tds\restaurante_tds-master2\bin\Debug\net6.0\appsettings.json
 C:\Tds\restaurante_tds-master2\bin\Debug\net6.0\Aula03.staticwebassets.runtime.json

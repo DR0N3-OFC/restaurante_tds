@@ -15,16 +15,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Tds\Restaurante
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Tds/Restaurante/pages/Atendimentos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQXRlbmRpbWVudG9zXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Tds/Restaurante/pages/Atendimentos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQXRlbmRpbWVudG9zXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Tds/Restaurante/pages/Atendimentos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQXRlbmRpbWVudG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Tds/Restaurante/pages/Atendimentos/Index.cshtml]

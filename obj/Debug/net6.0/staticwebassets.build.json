@@ -1,19 +1,11 @@
 {
   "Version": 1,
-  "Hash": "Ohc8DGGPVkc/xrp8j1s6T3X80KESasphktIFRu9jftc=",
+  "Hash": "iI3kq78o6IWWsgroVPqj9lMlX7b48K4jOb3SC953BjM=",
   "Source": "Aula03",
   "BasePath": "_content/Aula03",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [
-    {
-      "Name": "Aula03\\wwwroot",
-      "Source": "Aula03",
-      "ContentRoot": "C:\\Tds\\Restaurante\\wwwroot\\",
-      "BasePath": "_content/Aula03",
-      "Pattern": "**"
-    }
-  ],
+  "DiscoveryPatterns": [],
   "Assets": []
 }
