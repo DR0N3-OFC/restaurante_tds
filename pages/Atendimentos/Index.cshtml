@@ -4,8 +4,6 @@
 }
 
 <hr />
-<td><a asp-page="/Produtos/Create">Criar Novo Produto</a></td>
-<hr />
 
 <body>
     <div>
@@ -15,6 +13,7 @@
                     <td>@Html.DisplayNameFor(model => model.AtendimentosList[0].AtendimentoID)</td>
                     <td>Garçom</td>
                     <td>Mesa</td>
+                    <td>Total</td>
                 </tr>
             </thead>
             <tbody>
@@ -24,10 +23,20 @@
                         <td>@Html.DisplayFor(model => eventModel.AtendimentoID)</td>
                         <td>@Html.DisplayFor(model => eventModel.Garcom!.Name)</td>
                         <td>@Html.DisplayFor(model => eventModel.Mesa!.MesaID)</td>
+                        @{if (eventModel.Produtos.Count==0)
+                            {
+                                <td>R$0,00</td>
+                            }
+                            else
+                            {
+                                double? sumOfPrices = eventModel.Produtos.Sum(p => p.Price);
+                                <td>@string.Format("R${0:N2}", sumOfPrices)</td>
+                            }
+                        }
                         <td>@Html.DisplayFor(model => eventModel.InitDate)</td>
                         <td>@Html.DisplayFor(model => eventModel.FinishDate)</td>
+                        
                         <td>
-                            <a asp-page="./Edit" asp-route-id="@eventModel.AtendimentoID">Alterar</a>
                             <a asp-page="./Delete" asp-route-id="@eventModel.AtendimentoID">Remover</a>
                         </td>
                     </tr>

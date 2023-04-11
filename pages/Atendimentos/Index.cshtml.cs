@@ -19,7 +19,11 @@ namespace Aula03.pages.Atendimentos
         }
         public async Task<IActionResult> OnGetAsync()
         {
-            AtendimentosList = await _context.Atendimento!.Include(a => a.Garcom).Include(a => a.Mesa).ToListAsync();
+            AtendimentosList = await _context.Atendimento!
+                .Include(a => a.Garcom)
+                .Include(a => a.Mesa)
+                .Include(a => a.Produtos)
+                .ToListAsync();
             return Page();
         }
     }

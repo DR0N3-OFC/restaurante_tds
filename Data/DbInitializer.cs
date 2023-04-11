@@ -94,6 +94,26 @@ namespace Aula03.Data
 
             context.AddRange(categoria3);
 
+            var categoria4 = new Categoria[]
+            {
+                new Categoria{
+                    Name = "Suco",
+
+                },
+            };
+
+            context.AddRange(categoria4);
+
+            var categoria5 = new Categoria[]
+            {
+                new Categoria{
+                    Name = "Quebra da Matrix",
+
+                },
+            };
+
+            context.AddRange(categoria5);
+
             var produto1 = new Produto[]
             {
                 new Produto{
@@ -145,6 +165,47 @@ namespace Aula03.Data
             };
 
             context.AddRange(produto3);
+
+
+            produto3 = new Produto[]
+            {
+                new Produto{
+                    Name = "Coca Lata",
+                    Desc = "Refrigerante Insaldável",
+                    Price = 4.5,
+                    Categoria = categoria3[0]
+
+                },
+            };
+
+            context.AddRange(produto3);
+
+            produto3 = new Produto[]
+            {
+                new Produto{
+                    Name = "Suco de Uva Integral",
+                    Desc = "Tier S",
+                    Price = 7.5,
+                    Categoria = categoria4[0]
+
+                },
+            };
+
+            context.AddRange(produto3);
+
+            produto3 = new Produto[]
+            {
+                new Produto{
+                    Name = "Café",
+                    Desc = "Tier S",
+                    Price = 400.5,
+                    Categoria = categoria5[0]
+
+                },
+            };
+
+            context.AddRange(produto3);
+
 
             var atendimento = new Atendimento[]
             {

@@ -128,7 +128,7 @@ namespace Aula03.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CategoriaID")
+                    b.Property<int?>("CategoriaID")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Desc")
@@ -186,9 +186,7 @@ namespace Aula03.Migrations
                 {
                     b.HasOne("Aula03.Models.Categoria", "Categoria")
                         .WithMany()
-                        .HasForeignKey("CategoriaID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoriaID");
 
                     b.Navigation("Categoria");
                 });

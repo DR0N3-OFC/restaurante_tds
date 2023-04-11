@@ -13,10 +13,14 @@ namespace Aula03.pages
             _httpContextAccessor = httpContextAccessor;
 
             HttpContext httpContext = _httpContextAccessor.HttpContext;
+            //Reserva
             httpContext.Session.SetInt32("GarcomID", 1);
             httpContext.Session.SetInt32("MesaID", 1);
             httpContext.Session.SetInt32("AtendimentoID", 1);
             httpContext.Session.SetString("Checked", "F");
+
+            //Create Produtos
+            httpContext.Session.SetInt32("CategoriaID", 1);
         }
 
     }

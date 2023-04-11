@@ -2,7 +2,8 @@
 @model Aula03.pages.Produtos.Create
 @{
 }
-<h1>Adicionar Livro</h1>
+<h1>Adicionar Produto</h1>
+<div asp-validation-summary="ModelOnly" class="text-dange"></div>
 <div>
 	<div class="row">
 		<div class="col-md-4">
@@ -15,11 +16,27 @@
 					<span asp-validation-for="Produto.Name" class="text-dange"></span>
 				</div>
 				<div class="form-group">
+					<label asp-for="Produto.Desc">Descrição:</label>
+					<input asp-for="Produto.Desc" class="form-control" />
+					<span asp-validation-for="Produto.Desc" class="text-dange"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="Produto.Categoria">Categoria: </label>
+					
+					@foreach(var categoria in Model.CategoriasList)
+					{
+						<div class="form-check form-check-inline">			
+							<input class="form-control" type="radio" id="@categoria.Name" name="CatID" value="@categoria.CategoriaID"/>
+							<label for="CatID">@categoria.Name</label>
+						</div>
+					}
+				</div>
+				<div class="form-group">
 					<label asp-for="Produto.Price">Preço:</label>
 					<input asp-for="Produto.Price" type="int" class="form-control" />
 				</div>
 				<div class="form-group">
-					<input type="submit" class="btn btn-primary" value="Salvar" />
+					<input type="submit" value="Salvar" class="btn btn-primary" />
 					<a asp-page="/Produtos/Index" class="btn btn-secondary">Cancelar</a>
 				</div>
 			</form>

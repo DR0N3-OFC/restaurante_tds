@@ -7,7 +7,8 @@
 
 <div>
 	<p><strong>Nome:</strong>@Model.Produto.Name</p>
-	<p><strong>Data:</strong>@Model.Produto.Price</p>
+	<p><strong>Nome:</strong>@Model.Produto.Desc</p>
+	<p><strong>Preço:</strong>@string.Format("R${0:N2}", Model.Produto.Price)</p>
 </div>
 
 <form method="post">
