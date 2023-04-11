@@ -1,4 +1,4 @@
-# Restaurante Bom de BOca
+# Restaurante Bom de Boca
 Sistema de gerenciamento de pedidos de um restaurante, realizado como requisito de nota para a disciplina de Tecnologia em Desenvolvimento de Sistemas da UTFPR-MD.
 
 ## Instalação
