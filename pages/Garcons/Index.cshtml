@@ -1,0 +1,40 @@
+﻿@page
+@model Aula03.pages.Garcons.Index
+@{
+}
+
+<hr />
+<td><a asp-page="/Garcons/Create">Adicionar Garçom</a></td>
+<hr />
+
+<body>
+    <div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.GarconsList[0].GarcomID)</td>
+                    <td>@Html.DisplayNameFor(model => model.GarconsList[0].Name)</td>
+                    <td>@Html.DisplayNameFor(model => model.GarconsList[0].SecondName)</td>
+                    <td>@Html.DisplayNameFor(model => model.GarconsList[0].Telefone)</td>
+                    <td>@Html.DisplayNameFor(model => model.GarconsList[0].BirthDate)</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var garcomModel in Model.GarconsList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => garcomModel.GarcomID)</td>
+                        <td>@Html.DisplayFor(model => garcomModel.Name)</td>
+                        <td>@Html.DisplayFor(model => garcomModel.SecondName)</td>
+                        <td>@Html.DisplayFor(model => garcomModel.Telefone)</td>
+                        <td>@Html.DisplayFor(model => garcomModel.BirthDate)</td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@garcomModel.GarcomID">Alterar</a>
+                            <a asp-page="./Delete" asp-route-id="@garcomModel.GarcomID">Remover</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

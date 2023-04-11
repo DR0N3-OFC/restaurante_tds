@@ -5,6 +5,7 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Aula03
 build_property.RootNamespace = Aula03
@@ -29,6 +30,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Tds/Restaurante/pages/Atendimentos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = cGFnZXNcQXRlbmRpbWVudG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Garcons/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcR2FyY29uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Garcons/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcR2FyY29uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Garcons/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcR2FyY29uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Tds/Restaurante/pages/Garcons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = cGFnZXNcR2FyY29uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Tds/Restaurante/pages/HttpSession/Index.cshtml]

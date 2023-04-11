@@ -1,0 +1,36 @@
+﻿@page
+@model Aula03.pages.Garcons.Create
+@{
+}
+<h1>Adicionar Garçom</h1>
+<div>
+	<div class="row">
+		<div class="col-md-4">
+			<form method="post">
+				<div asp-validation-summary="ModelOnly" class="text-dange"></div>
+				<input type="hidden" asp-for="Garcom.GarcomID" />
+				<div class="form-group">
+					<label asp-for="Garcom.Name">Nome:</label>
+					<input asp-for="Garcom.Name" class="form-control" />
+					<span asp-validation-for="Garcom.Name" class="text-dange"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="Garcom.SecondName">Sobrenome:</label>
+					<input asp-for="Garcom.SecondName" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label asp-for="Garcom.Telefone">Telefone:</label>
+					<input asp-for="Garcom.Telefone" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label asp-for="Garcom.BirthDate">Data de Nascimento:</label>
+					<input asp-for="Garcom.BirthDate" type="date" class="form-control" />
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btn btn-primary" value="Salvar" />
+					<a asp-page="/Garcons/Index" class="btn btn-secondary">Cancelar</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
