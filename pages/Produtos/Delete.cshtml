@@ -2,12 +2,12 @@
 @model Aula03.pages.Produtos.Delete
 @{
 }
-
+<div class="container mt-5">
 <h1>Detalhes do Item para Remover</h1>
 
 <div>
 	<p><strong>Nome:</strong>@Model.Produto.Name</p>
-	<p><strong>Nome:</strong>@Model.Produto.Desc</p>
+	<p><strong>Descrição:</strong>@Model.Produto.Desc</p>
 	<p><strong>Preço:</strong>@string.Format("R${0:N2}", Model.Produto.Price)</p>
 </div>
 
@@ -17,3 +17,4 @@
 		<a asp-page="/Produtos/Index" class="btn btn-primary">Voltar à Lista</a>
 	</div>
 </form>
+</div>

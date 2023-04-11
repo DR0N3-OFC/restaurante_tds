@@ -2,18 +2,18 @@
 @model Aula03.pages.Produtos.Edit
 @{
 }
-<h1>Editar Produto</h1>
-<hr/>
-<div>
+
+<div class="container mt-5">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-4 mx-auto criar">
+			<h1>Editar Produto</h1>
 			<form method="post">
-				<div asp-validation-summary="ModelOnly" class="text-dange"></div>
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 				<input type="hidden" asp-for="Produto.ProdutoID" />
 				<div class="form-group">
 					<label asp-for="Produto.Name">Nome:</label>
 					<input asp-for="Produto.Name" class="form-control" />
-					<span asp-validation-for="Produto.Name" class="text-dange"></span>
+					<span asp-validation-for="Produto.Name" class="text-danger"></span>
 				</div>
 				<div class="form-group">
 					<label asp-for="Produto.Price">Preço:</label>

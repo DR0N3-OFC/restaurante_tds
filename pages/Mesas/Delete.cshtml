@@ -2,11 +2,11 @@
 @model Aula03.pages.Mesas.Delete
 @{
 }
-
-<h1>Detalhes do Item para Remover</h1>
+<div class="container mt-5">
+<h1>Detalhes da Mesa para Remover</h1>
 
 <div>
-	<p><strong>Nome:</strong>@Model.Mesa.MesaID</p>
+	<p><strong>Número da Mesa:</strong>@Model.Mesa.MesaID</p>
 </div>
 
 <form method="post">
@@ -15,3 +15,4 @@
 		<a asp-page="/Produtos/Index" class="btn btn-primary">Voltar à Lista</a>
 	</div>
 </form>
+</div>
