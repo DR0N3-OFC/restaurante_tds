@@ -1,0 +1,42 @@
+﻿@page "{id:int}"
+@model Aula03.pages.Services.Delete
+@{
+}
+<div class="container mt-5">
+    <h1>Detalhes do Atendimento</h1>
+
+    <div>
+	    <p><strong>Nome:</strong>@Model.Service.ServiceID</p>
+    	<p><strong>Mesa:</strong>@Html.DisplayFor(model => model.Service.Table.Name)</p>
+    	<p><strong>Data de início:</strong>@Model.Service.InitDate</p>
+    	<p><strong>Data de fim:</strong>@Model.Service.FinishDate</p>
+    </div>
+
+
+    <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var eventModel in Model.Service.ServiceProducts)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(model => eventModel.Product.Name)</td>
+                            <td>@Html.DisplayFor(model => eventModel.Product.Price)</td>
+                            <td>@Html.DisplayFor(model => eventModel.Amount)</td>
+                        </tr>
+                    }
+                </tbody>
+    </table>
+
+    <form method="post">
+	    <div class="group-form">
+		    <input type="submit" value="Deletar" class="btn btn-danger" />
+            <a asp-page="/Services/Index" class="btn btn-primary">Voltar à Lista</a>
+	    </div>
+    </form>
+</div>

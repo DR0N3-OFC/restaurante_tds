@@ -1,0 +1,21 @@
+﻿@page "{id:int}"
+@model Aula03.pages.Waiters.Delete
+@{
+}
+<div class="container mt-5">
+<h1>Detalhes do Garçom a Remover</h1>
+
+<div>
+	<p><strong>Nome:</strong>@Model.Waiter.Name</p>
+	<p><strong>Sobrenome:</strong>@Model.Waiter.LastName</p>
+	<p><strong>Telefone:</strong>@Model.Waiter.Cellphone</p>
+	<p><strong>Data de Nascimento:</strong>@Model.Waiter.BirthDate</p>
+</div>
+
+<form method="post">
+	<div class="group-form">
+		<input type="submit" value="Deletar" class="btn btn-danger" />
+		<a asp-page="/Waiters/Index" class="btn btn-primary">Voltar à Lista</a>
+	</div>
+</form>
+</div>

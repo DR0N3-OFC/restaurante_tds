@@ -1,0 +1,50 @@
+﻿@page
+@model Aula03.pages.Waiters.Index
+@{
+}
+
+<div class="container">
+    <hr />
+    <td><a asp-page="/Waiters/Create">Adicionar Garçom</a></td>
+    <hr />
+
+    <body>
+        <div>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <td>Número de Identificação</td>
+                        <td>Nome</td>
+                        <td>Sobrenome</td>
+                        <td>Telefone</td>
+                        <td>Data de Nascimento</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var First = true;
+                    }
+                    @foreach (var garcomModel in Model.WaitersList)
+                    {
+                        if (First)
+                        {
+                            First = false;
+                            continue;
+                        }
+                        <tr>
+                            <td>@Html.DisplayFor(model => garcomModel.WaiterID)</td>
+                            <td>@Html.DisplayFor(model => garcomModel.Name)</td>
+                            <td>@Html.DisplayFor(model => garcomModel.LastName)</td>
+                            <td>@Html.DisplayFor(model => garcomModel.Cellphone)</td>
+                            <td>@Html.DisplayFor(model => garcomModel.BirthDate)</td>
+                            <td>
+                                <a asp-page="./Edit" asp-route-id="@garcomModel.WaiterID">Alterar</a>
+                                <a asp-page="./Delete" asp-route-id="@garcomModel.WaiterID">Remover</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </body>
+</div>

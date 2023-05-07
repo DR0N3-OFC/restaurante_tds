@@ -1,0 +1,44 @@
+﻿@page
+@model Aula03.pages.Categories.Index
+@{
+}
+
+<div class="container">
+    <hr />
+    <td><a asp-page="/Categories/Create">Adicionar Categoria</a></td>
+    <hr />
+
+    <body>
+        <div>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <td>Nome</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var First = true;
+                    }
+                    @foreach (var categoriaModel in Model.CategoriesList)
+                    {
+                        if (First)
+                        {
+                            First = false;
+                            continue;
+                        }
+                        <tr>
+                            <td>@Html.DisplayFor(model => categoriaModel.Name)</td>
+                            <td colspan="2">
+                                <a asp-page="./Edit" asp-route-id="@categoriaModel.CategoryID">Alterar</a>
+                            </td>
+                            <td>
+                                <a asp-page="./Delete" asp-route-id="@categoriaModel.CategoryID">Remover</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </body>
+</div>

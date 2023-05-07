@@ -1,0 +1,118 @@
+﻿@page
+@model Aula03.pages.Dashboard.Index
+@{
+}
+
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Garçons</h1>
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>Sobrenome</td>
+                    <td>Total de Vendas</td>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var First = true;
+                }
+                @foreach (var garcomModel in Model.WaitersList)
+                {
+                    if (First)
+                    {
+                        First = false;
+                        continue;
+                    }
+                    <tr>
+                        <td>@Html.DisplayFor(model => garcomModel.Name)</td>
+                        <td>@Html.DisplayFor(model => garcomModel.LastName)</td>
+                        <td>@String.Format("R$ {0:N2}",
+                                Model.ServicesList
+                                        .Where(o => o.Waiter.WaiterID == garcomModel.WaiterID)
+                                        .SelectMany(s => s.ServiceProducts)
+                                        .Sum(sp => sp.Product.Price*sp.Amount))</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="container">
+        <h1 class="text-center">Mesas</h1>
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <td>Mesa</td>
+                    <td>Total de Vendas</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var tableModel in Model.TablesList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => tableModel.TableID)</td>
+                        <td>@String.Format("R$ {0:N2}",
+                                Model.ServicesList
+                                        .Where(o => o.Table.TableID == tableModel.TableID)
+                                        .SelectMany(s => s.ServiceProducts)
+                                        .Sum(sp => sp.Product.Price*sp.Amount))</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">Produtos</h1>
+        
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <td>Produto</td>
+                    <td>Total de Vendas</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var productModel in Model.ProductsList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => productModel.Name)</td>
+                        <td>@String.Format("R$ {0:N2}",
+                                Model.ServicesList
+                                        .SelectMany(s => s.ServiceProducts)
+                                        .Where(o => o.Product.ProductID == productModel.ProductID)
+                                        .Sum(sp => sp.Product.Price*sp.Amount))</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="container">
+        <h1 class="text-center">Categorias</h1>
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <td>Categoria</td>
+                    <td>Total de Vendas</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var categoryModel in Model.CategoriesList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => categoryModel.Name)</td>
+                        <td>@String.Format("R$ {0:N2}",
+                                Model.ServicesList
+                                        .SelectMany(s => s.ServiceProducts)
+                                        .Where(o => o.Product.Category.CategoryID == categoryModel.CategoryID)
+                                        .Sum(sp => sp.Product.Price*sp.Amount))</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

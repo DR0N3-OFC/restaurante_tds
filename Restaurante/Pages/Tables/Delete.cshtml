@@ -1,0 +1,18 @@
+﻿@page "{id:int}"
+@model Aula03.pages.Tables.Delete
+@{
+}
+<div class="container mt-5">
+<h1>Detalhes da Mesa para Remover</h1>
+
+<div>
+	<p><strong>Número da Mesa:</strong>@Model.Table.Name</p>
+</div>
+
+<form method="post">
+	<div class="group-form">
+		<input type="submit" value="Deletar" class="btn btn-danger" />
+		<a asp-page="/Tables/Index" class="btn btn-primary">Voltar à Lista</a>
+	</div>
+</form>
+</div>
