@@ -10,4 +10,4 @@ Caso alguma exceção referente ao diretório `wwwroot` ocorra, possivelmente el
   * Para instalar digite `dotnet tool install --global dotnet-ef` e `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`;
 
 ## Rodando
-* Para rodar o projeto, inicie cada um dos projetos ASP.NET por meio do comando `dotnet run`ou `dotnet watch run`.
+* Para rodar o projeto, inicie cada um dos projetos ASP.NET por meio do comando `dotnet run` ou `dotnet watch run`.
