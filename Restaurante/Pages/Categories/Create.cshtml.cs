@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -24,7 +25,7 @@ namespace Aula03.pages.Categories
 			try
 			{
 				var httpClient = new HttpClient();
-				var url = $"https://localhost:7048/Categories/";
+				var url = $"{Constant.url}Categories/";
 
 				var requestMessage = new HttpRequestMessage(HttpMethod.Post, url);
 				var jsonProduct = JsonConvert.SerializeObject(Category);

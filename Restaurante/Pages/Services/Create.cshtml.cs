@@ -1,3 +1,4 @@
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -55,7 +56,7 @@ namespace Aula03.pages.Services
             if (check == "T")
             {
                 httpClient = new HttpClient();
-                url = $"https://localhost:7048/Services/{service_id}";
+                url = $"{Constant.url}Services/{service_id}";
                 requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
                 response = httpClient.Send(requestMessage);
                 content = response.Content.ReadAsStringAsync().Result;
@@ -64,7 +65,7 @@ namespace Aula03.pages.Services
 
             //Recupera a Lista de Produtos
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Products/";
+            url = $"{Constant.url}Products/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = httpClient.Send(requestMessage);
             content = response.Content.ReadAsStringAsync().Result;
@@ -73,7 +74,7 @@ namespace Aula03.pages.Services
 
             //Recupera a Lista de Garçons
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Waiters/";
+            url = $"{Constant.url}Waiters/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = httpClient.Send(requestMessage);
             content = response.Content.ReadAsStringAsync().Result;
@@ -81,7 +82,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Tables/";
+            url = $"{Constant.url}Tables/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = httpClient.Send(requestMessage);
             content = response.Content.ReadAsStringAsync().Result;
@@ -103,7 +104,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Tables/1";
+            url = $"{Constant.url}Tables/1";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
@@ -111,7 +112,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Waiters/1";
+            url = $"{Constant.url}Waiters/1";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
@@ -124,7 +125,7 @@ namespace Aula03.pages.Services
             Table.LiberationTime = DateTime.Now.AddSeconds(5);
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Tables/1";
+            url = $"{Constant.url}Tables/1";
             requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
             var jsonProduct = JsonConvert.SerializeObject(Table);
             requestMessage.Content = new StringContent(jsonProduct, Encoding.UTF8, "application/json");
@@ -142,7 +143,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Services/";
+            url = $"{Constant.url}Services/";
             requestMessage = new HttpRequestMessage(HttpMethod.Post, url);
             jsonProduct = JsonConvert.SerializeObject(Service);
             requestMessage.Content = new StringContent(jsonProduct, Encoding.UTF8, "application/json");
@@ -156,7 +157,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/LastService/";
+            url = $"{Constant.url}LastService/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
@@ -174,7 +175,7 @@ namespace Aula03.pages.Services
         public async Task<IActionResult> OnPostAdicionarAsync([FromForm] int id, [FromForm] int amount)
         {
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Products/{id}";
+            url = $"{Constant.url}Products/{id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
@@ -183,7 +184,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/LastService/";
+            url = $"{Constant.url}LastService/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = httpClient.Send(requestMessage);
             content = response.Content.ReadAsStringAsync().Result;
@@ -203,7 +204,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Services/{service_id}";
+            url = $"{Constant.url}Services/{service_id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
             var jsonProduct = JsonConvert.SerializeObject(Service);
             requestMessage.Content = new StringContent(jsonProduct, Encoding.UTF8, "application/json");
@@ -237,7 +238,7 @@ namespace Aula03.pages.Services
         public async Task<IActionResult> OnPostDeletarAsync([FromForm] int id)
         {
             var httpClient = new HttpClient();
-            var url = $"https://localhost:7048/ServiceProducts/{id}";
+            var url = $"{Constant.url}ServiceProducts/{id}";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
             var content = await response.Content.ReadAsStringAsync();
@@ -246,7 +247,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Services/{service_id}";
+            url = $"{Constant.url}Services/{service_id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = httpClient.Send(requestMessage);
             content = response.Content.ReadAsStringAsync().Result;
@@ -286,7 +287,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Services/{service_id}";
+            url = $"{Constant.url}Services/{service_id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
             var jsonProduct = JsonConvert.SerializeObject(Service);
             requestMessage.Content = new StringContent(jsonProduct, Encoding.UTF8, "application/json");
@@ -299,7 +300,7 @@ namespace Aula03.pages.Services
         public async Task<IActionResult> OnPostDesignarAsync([FromForm] int id)
         {
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Waiters/{id}";
+            url = $"{Constant.url}Waiters/{id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
@@ -307,7 +308,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/LastService/";
+            url = $"{Constant.url}LastService/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = httpClient.Send(requestMessage);
             content = response.Content.ReadAsStringAsync().Result;
@@ -320,7 +321,7 @@ namespace Aula03.pages.Services
             service_id = httpContext!.Session.GetInt32("AtendimentoID");
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Services/{service_id}";
+            url = $"{Constant.url}Services/{service_id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
             var jsonProduct = JsonConvert.SerializeObject(Service);
             requestMessage.Content = new StringContent(jsonProduct, Encoding.UTF8, "application/json");
@@ -332,7 +333,7 @@ namespace Aula03.pages.Services
         public async Task<IActionResult> OnPostMesarAsync([FromForm] int id)
         {
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Tables/{id}";
+            url = $"{Constant.url}Tables/{id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
@@ -340,7 +341,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/LastService/";
+            url = $"{Constant.url}LastService/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = httpClient.Send(requestMessage);
             content = response.Content.ReadAsStringAsync().Result;
@@ -353,7 +354,7 @@ namespace Aula03.pages.Services
             service_id = httpContext!.Session.GetInt32("AtendimentoID");
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Services/{service_id}";
+            url = $"{Constant.url}Services/{service_id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
             var jsonProduct = JsonConvert.SerializeObject(Service);
             requestMessage.Content = new StringContent(jsonProduct, Encoding.UTF8, "application/json");
@@ -370,7 +371,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Tables/{table_id}";
+            url = $"{Constant.url}Tables/{table_id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
@@ -380,7 +381,7 @@ namespace Aula03.pages.Services
 
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Services/{service_id}";
+            url = $"{Constant.url}Services/{service_id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Delete, url);
             response = await httpClient.SendAsync(requestMessage);
 
@@ -396,7 +397,7 @@ namespace Aula03.pages.Services
         {
 
             httpClient = new HttpClient();
-            url = $"https://localhost:7048/Services/{service_id}";
+            url = $"{Constant.url}Services/{service_id}";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = httpClient.Send(requestMessage);
             content = response.Content.ReadAsStringAsync().Result;

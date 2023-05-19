@@ -5,121 +5,120 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Aula03
 build_property.RootNamespace = Aula03
-build_property.ProjectDir = D:\Programação\Restaurante\Restaurante\
+build_property.ProjectDir = C:\Tds\RestauranteDocker\Restaurante\
 build_property.RazorLangVersion = 2.1
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Programação\Restaurante\Restaurante
+build_property.MSBuildProjectDirectory = C:\Tds\RestauranteDocker\Restaurante
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Categories/Create.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Categories/Delete.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Categories/Edit.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Categories/Index.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Dashboard/Index.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/HttpSession/Index.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/HttpSession/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSHR0cFNlc3Npb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Index.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/IndexAdm.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/IndexAdm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXhBZG0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Products/Create.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Products/Delete.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Products/Edit.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Products/Index.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Services/Create.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Services/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Services/Delete.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Services/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Services/Index.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Services/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Shared/_MainLayout.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Shared/_MainLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NYWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Shared/_MenuPartialPage.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Shared/_MenuPartialPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NZW51UGFydGlhbFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Tables/Create.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Tables/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Tables/Delete.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Tables/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Tables/Edit.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Tables/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Tables/Index.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Tables/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Waiters/Create.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Waiters/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FpdGVyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Waiters/Delete.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Waiters/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FpdGVyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Waiters/Edit.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Waiters/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FpdGVyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/Waiters/Index.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/Waiters/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FpdGVyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/_ViewImports.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programação/Restaurante/Restaurante/Pages/_ViewStart.cshtml]
+[C:/Tds/RestauranteDocker/Restaurante/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

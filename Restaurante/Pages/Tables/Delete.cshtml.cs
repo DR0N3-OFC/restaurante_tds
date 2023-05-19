@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -20,7 +21,7 @@ namespace Aula03.pages.Tables
         {
 
             var httpClient = new HttpClient();
-            var url = $"https://localhost:7048/Tables/{id}";
+            var url = $"{Constant.url}Tables/{id}";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
 
@@ -42,7 +43,7 @@ namespace Aula03.pages.Tables
             try
             {
                 var httpClient = new HttpClient();
-                var url = $"https://localhost:7048/Tables/{id}";
+                var url = $"{Constant.url}Tables/{id}";
                 var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url);
                 var response = await httpClient.SendAsync(requestMessage);
                 return RedirectToPage("/Tables/Index");

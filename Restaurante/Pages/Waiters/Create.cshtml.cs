@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -25,7 +26,7 @@ namespace Aula03.pages.Waiters
             try
             {
                 var httpClient = new HttpClient();
-                var url = $"https://localhost:7048/Waiters/";
+                var url = $"{Constant.url}Waiters/";
 
                 var requestMessage = new HttpRequestMessage(HttpMethod.Post, url);
                 var jsonProduct = JsonConvert.SerializeObject(Waiter);

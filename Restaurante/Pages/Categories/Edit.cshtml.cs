@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -21,7 +22,7 @@ namespace Aula03.pages.Categories
         {
 
             var httpClient = new HttpClient();
-            var url = $"https://localhost:7048/Categories/{id}";
+            var url = $"{Constant.url}Categories/{id}";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
 
@@ -40,7 +41,7 @@ namespace Aula03.pages.Categories
         {
             
             var httpClient = new HttpClient();
-            var url = $"https://localhost:7048/Categories/{id}";
+            var url = $"{Constant.url}Categories/{id}";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
 
@@ -56,7 +57,7 @@ namespace Aula03.pages.Categories
             try
             {
                 httpClient = new HttpClient();
-                url = $"https://localhost:7048/Categories/{id}";
+                url = $"{Constant.url}Categories/{id}";
 
                 requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
                 var jsonProduct = JsonConvert.SerializeObject(categoryToUpdate);

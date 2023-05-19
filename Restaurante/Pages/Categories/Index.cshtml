@@ -17,16 +17,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @{
-                        var First = true;
-                    }
                     @foreach (var categoriaModel in Model.CategoriesList)
                     {
-                        if (First)
-                        {
-                            First = false;
-                            continue;
-                        }
                         <tr>
                             <td>@Html.DisplayFor(model => categoriaModel.Name)</td>
                             <td colspan="2">

@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -21,7 +22,7 @@ namespace Aula03.pages.Products
         public async Task<IActionResult> OnGetAsync()
         {
             var httpClient = new HttpClient();
-            var url = "https://localhost:7048/Products/";
+            var url = $"{Constant.url}Products/";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
 

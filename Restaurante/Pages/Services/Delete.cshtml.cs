@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -20,7 +21,7 @@ namespace Aula03.pages.Services
         {
 
             var httpClient = new HttpClient();
-            var url = $"https://localhost:7048/Services/{id}";
+            var url = $"{Constant.url}Services/{id}";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
             var content = await response.Content.ReadAsStringAsync();
@@ -39,7 +40,7 @@ namespace Aula03.pages.Services
             try
             {
                 var httpClient = new HttpClient();
-                var url = $"https://localhost:7048/Services/{id}";
+                var url = $"{Constant.url}Services/{id}";
                 var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url);
                 var response = await httpClient.SendAsync(requestMessage);
 

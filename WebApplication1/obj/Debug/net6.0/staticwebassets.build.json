@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "jrIfxraCsV+N8w4HscQL/TsDoGZg+QUaMLOZWv8qXlE=",
+  "Source": "Aula03",
+  "BasePath": "_content/Aula03",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Aula03\\wwwroot",
+      "Source": "Aula03",
+      "ContentRoot": "C:\\Tds\\RestauranteDocker\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Aula03",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

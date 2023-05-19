@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -28,35 +29,35 @@ namespace Aula03.pages.Dashboard
         public async Task<IActionResult> OnGetAsync()
         {
             httpClient = new HttpClient();
-            url = "https://localhost:7048/Tables/";
+            url = $"{Constant.url}Tables/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
             TablesList = JsonConvert.DeserializeObject<List<Table>>(content);
 
             httpClient = new HttpClient();
-            url = "https://localhost:7048/Waiters/";
+            url = $"{Constant.url}Waiters/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
             WaitersList = JsonConvert.DeserializeObject<List<Waiter>>(content);
 
             httpClient = new HttpClient();
-            url = "https://localhost:7048/Categories/";
+            url = $"{Constant.url}Categories/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
             CategoriesList = JsonConvert.DeserializeObject<List<Category>>(content);
 
             httpClient = new HttpClient();
-            url = "https://localhost:7048/Products/";
+            url = $"{Constant.url}Products/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();
             ProductsList = JsonConvert.DeserializeObject<List<Product>>(content);
 
             httpClient = new HttpClient();
-            url = "https://localhost:7048/Services/";
+            url = $"{Constant.url}Services/";
             requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             response = await httpClient.SendAsync(requestMessage);
             content = await response.Content.ReadAsStringAsync();

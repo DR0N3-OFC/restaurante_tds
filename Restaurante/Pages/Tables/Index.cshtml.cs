@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -19,7 +20,7 @@ namespace Aula03.pages.Tables
         public async Task<IActionResult> OnGetAsync()
         {
             var httpClient = new HttpClient();
-            var url = "https://localhost:7048/Tables/";
+            var url = $"{Constant.url}Tables/";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
 
@@ -33,7 +34,7 @@ namespace Aula03.pages.Tables
         public async Task<IActionResult> OnPostReservarAsync([FromForm] int id)
         {
             var httpClient = new HttpClient();
-            var url = $"https://localhost:7048/TableOpen/{id}";
+            var url = $"{Constant.url}TableOpen/{id}";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
 
@@ -43,7 +44,7 @@ namespace Aula03.pages.Tables
         public async Task<IActionResult> OnPostFecharAsync([FromForm] int id)
         {
             var httpClient = new HttpClient();
-            var url = $"https://localhost:7048/TableClose/{id}";
+            var url = $"{Constant.url}TableClose/{id}";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
 

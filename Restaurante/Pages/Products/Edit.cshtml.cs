@@ -1,4 +1,5 @@
 
+using Aula03.Constants;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -25,7 +26,7 @@ namespace Aula03.pages.Products
 		public async Task<IActionResult> OnGetAsync(int? id)
         {
             var httpClient = new HttpClient();
-            var url = $"https://localhost:7048/Products/{id}";
+            var url = $"{Constant.url}Products/{id}";
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
             var response = await httpClient.SendAsync(requestMessage);
 
@@ -44,7 +45,7 @@ namespace Aula03.pages.Products
         {
 
 			var httpClient = new HttpClient();
-			var url = $"https://localhost:7048/Products/{id}";
+			var url = $"{Constant.url}Products/{id}";
 			var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
 			var response = await httpClient.SendAsync(requestMessage);
 
@@ -62,7 +63,7 @@ namespace Aula03.pages.Products
             try
             {
                 httpClient = new HttpClient();
-                url = $"https://localhost:7048/Products/{id}";
+                url = $"{Constant.url}Products/{id}";
 
                 requestMessage = new HttpRequestMessage(HttpMethod.Put, url);
                 var jsonProduct = JsonConvert.SerializeObject(productToUpdate);

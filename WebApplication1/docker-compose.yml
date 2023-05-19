@@ -1,0 +1,21 @@
+﻿﻿version: "3.8"
+sservices:
+  postgres:
+    image: my_postgres_image_restaurante
+    container_name: postgress_to_dm_with_data
+    environment:
+      POSTGRES_PASSWORD: 123
+    ports:
+      - 5432:5432
+  webapi:
+    build: .
+    container_name: dm_webapi_container_with_compose
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgres
+  restaurantefront:
+    build: ../Restaurante
+    container_name: dm_restaurante_container
+    ports:
+      - 7041:7041
