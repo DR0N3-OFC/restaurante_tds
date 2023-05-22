@@ -1,7 +1,7 @@
 ﻿﻿version: "3.8"
 sservices:
   postgres:
-    image: my_postgres_image_restaurante
+    image: snykral/my_postgres_image_restaurante:latest
     container_name: postgress_to_dm_with_data
     environment:
       POSTGRES_PASSWORD: 123
